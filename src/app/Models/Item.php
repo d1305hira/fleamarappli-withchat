@@ -62,12 +62,12 @@ class Item extends Model
 
       public function messages()
       {
-      return $this->hasMany(Message::class);
+      return $this->hasMany(Message::class, 'item_id', 'id');
       }
 
       public function latestMessage()
       {
-      return $this->hasOne(Message::class)->latestOfMany();
+      return $this->hasOne(Message::class, 'item_id', 'id')->latestOfMany();
       }
 
 }

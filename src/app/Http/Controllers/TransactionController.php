@@ -17,13 +17,19 @@ use Illuminate\Support\Facades\Mail;
 class TransactionController extends Controller
 {
     public function show(Item $item)
-    {
-      $user = auth()->user(); // ★ これが必要
+{
+    $user = auth()->user();
 
-      $item->load('user', 'purchase.user');
+    // 自分宛ての未読メッセージを既読にする
+    Message::where('item_id', $item->id)
+        ->where('to_user_id', $user->id)
+        ->where('is_read', 0)
+        ->update(['is_read' => 1]);
 
+    // ここから下は今のままでOK
+    $item->load('user', 'purchase.user');
 
-      $messages = Message::where('item_id', $item->id)
+    $messages = Message::where('item_id', $item->id)
         ->with('user')
         ->orderBy('created_at')
         ->get();

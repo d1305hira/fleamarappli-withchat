@@ -8,7 +8,6 @@
 *.key
 *.pem
 *.crt
-*.json
 config/*.php
 
 # Docker volumes

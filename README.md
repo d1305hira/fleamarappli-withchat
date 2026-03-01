@@ -12,7 +12,7 @@
 
 **Docker ビルド**
 
-1. `git clone git@github.com:d1305hira/freemer-appli.git`
+1. `git clone git@github.com:d1305hira/fleamarappli.git`
 2. DockerDesktop アプリを立ち上げる
 3. `docker-compose up -d --build`
 

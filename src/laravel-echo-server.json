@@ -1,0 +1,27 @@
+{
+  "authHost": "http://nginx",
+  "authEndpoint": "/broadcasting/auth",
+  "clients": [],
+  "database": "null",
+  "databaseConfig": {},
+  "devMode": true,
+  "host": "0.0.0.0",
+  "port": 6001,
+  "protocol": "http",
+  "socketio": {},
+  "secureOptions": 67108864,
+  "sslCertPath": "",
+  "sslKeyPath": "",
+  "sslCertChainPath": "",
+  "sslPassphrase": "",
+  "subscribers": {
+    "http": true,
+    "redis": false
+  },
+  "apiOriginAllow": {
+    "allowCors": true,
+    "allowOrigin": "*",
+    "allowMethods": "GET, POST",
+    "allowHeaders": "Origin, Content-Type, X-Auth-Token"
+  }
+}

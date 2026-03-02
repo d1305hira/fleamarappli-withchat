@@ -10,8 +10,9 @@ RUN apt-get update && apt-get install -y \
   libzip-dev \
   unzip \
   default-mysql-client \
+  libicu-dev \
   && docker-php-ext-configure gd --with-jpeg --with-freetype \
-  && docker-php-ext-install gd pdo_mysql zip
+  && docker-php-ext-install gd pdo_mysql zip bcmath intl
 
 RUN curl -sS https://getcomposer.org/installer | php \
   && mv composer.phar /usr/local/bin/composer \

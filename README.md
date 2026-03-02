@@ -15,12 +15,16 @@
 1. `git clone https://github.com/d1305hira/fleamarappli-withchat.git`
 2. `cd fleamarappli-withchat`
 
+**Dockerの起動**
+
+3. `docker-compose up -d --build`
+
 **Laravel 環境構築**
 
-3. `cd src`
-4. `composer install`
-5. `cp .env.example .env`
-6. `.env に以下を設定`
+4. `docker compose exec php bash`
+5. `composer install`
+6. `cp .env.example .env`
+7. `.env に以下を設定`
 
 ```text
 APP_NAME=Laravel
@@ -46,20 +50,17 @@ STRIPE_SECRET=sk_test_xxxxxxxxxxxxxxxxxxxxx
 
 ```
 
-**Dockerの起動**
-
-7. `cd ../`
-8. `docker-compose up -d --build`
-
 **Laravelの初期設定**
 
-9. アプリケーションキーの作成
-
-docker compose exec php bash
+8. アプリケーションキーの作成
 
 ```bash
 php artisan key:generate
 ```
+
+9. storage権限付与
+
+`chmod -R 777 storage bootstrap/cache`
 
 10. マイグレーションの実行
 

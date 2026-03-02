@@ -12,15 +12,15 @@
 
 **Docker ビルド**
 
-1. `git clone git@github.com:d1305hira/fleamarappli.git`
-2. DockerDesktop アプリを立ち上げる
-3. `docker-compose up -d --build`
+1. `git clone https://github.com/d1305hira/fleamarappli-withchat.git`
+2. `cd fleamarappli-withchat`
 
 **Laravel 環境構築**
 
-1. `docker-compose exec php bash`
-2. `composer install`
-3. .env に以下の環境変数を追加
+3. `cd src`
+4. `composer install`
+5. `cp .env.example .env`
+6. `.env に以下を設定`
 
 ```text
 APP_NAME=Laravel
@@ -46,19 +46,28 @@ STRIPE_SECRET=sk_test_xxxxxxxxxxxxxxxxxxxxx
 
 ```
 
-5. アプリケーションキーの作成
+**Dockerの起動**
+
+7. `cd ../`
+8. `docker-compose up -d --build`
+
+**Laravelの初期設定**
+
+9. アプリケーションキーの作成
+
+docker compose exec php bash
 
 ```bash
 php artisan key:generate
 ```
 
-6. マイグレーションの実行
+10. マイグレーションの実行
 
 ```bash
 php artisan migrate
 ```
 
-7. シーディングの実行
+11. シーディングの実行
 
 ```bash
 php artisan db:seed

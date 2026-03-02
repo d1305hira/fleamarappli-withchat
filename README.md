@@ -23,8 +23,10 @@
 
 4. `docker compose exec php bash`
 5. `composer install`
-6. `cp .env.example .env`
-7. `.env に以下を設定`
+6. `exit`
+7. `cd ./src`
+8. `cp .env.example .env`
+9. `.env に以下を設定`
 
 ```text
 APP_NAME=Laravel
@@ -54,9 +56,9 @@ STRIPE_SECRET=sk_test_xxxxxxxxxxxxxxxxxxxxx
 
 8. アプリケーションキーの作成
 
-```bash
-php artisan key:generate
-```
+`docker compose exec php bash`
+
+`php artisan key:generate`
 
 9. storage権限付与
 

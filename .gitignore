@@ -1,7 +1,6 @@
 /vendor/
 /node_modules/
 .env
-.env.*
 /storage/*.key
 /public/storage
 /storage/logs/*.log

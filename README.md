@@ -76,6 +76,12 @@ php artisan migrate
 php artisan db:seed
 ```
 
+12. storageへリンク
+
+```bash
+php artisan storage:link
+```
+
 ## 使用技術（実行環境）
 
 - PHP8.1.34

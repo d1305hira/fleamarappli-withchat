@@ -9,4 +9,6 @@
 /storage/framework/views/*
 /storage/framework/testing/*
 /storage/app/public/*
+!storage/app/public/.gitignore
+!storage/app/public/*
 docker/mysql/data/

@@ -1,0 +1,110 @@
+/* ============================
+  ヘッダー全体
+============================ */
+.header-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* ============================
+  ロゴ
+============================ */
+.header-logo {
+  flex: 2;
+  min-width: 120px;
+}
+
+.header-logo a {
+  font-size: clamp(18px, 2.2vw, 32px);
+  font-weight: bold;
+  line-height: 1;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.header-logo-image {
+  width: 100%;
+  height: auto;
+  padding-right: 1rem;
+  max-width: 360px;
+}
+
+/* ============================
+  検索バー
+============================ */
+.header-search {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.header-search form {
+  width: 100%;
+}
+
+.header-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: clamp(10px, 1.1vw, 16px);
+}
+
+/* ============================
+  ナビ
+============================ */
+.header-nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.header-nav a,
+.header-nav button {
+  font-size: clamp(8px, 1.2vw, 20px);
+  letter-spacing: 0.2em;
+  margin-left: 8px;
+  margin-right: 8px;
+  border: none;
+}
+
+/* ============================
+  レスポンシブ
+============================ */
+@media (max-width: 768px) {
+  .header-bar {
+      padding: 0 0.5rem;
+  }
+
+  .header-search {
+      padding: 0 0.5rem;
+  }
+
+  .header-nav {
+      gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header-logo-image,
+  .send-icon {
+      width: 20px;
+  }
+
+  .header-nav a,
+  .header-nav button {
+      margin: 0 4px;
+  }
+}

@@ -27,7 +27,7 @@ class MessageRequest extends FormRequest
             'message' => 'required|string|max:400',
             'image' => 'nullable|mimes:jpeg,png',
         ];
-    } 
+    }
 
     public function messages()
     {

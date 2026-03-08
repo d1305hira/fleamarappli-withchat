@@ -4,7 +4,7 @@
 <div class="container" style="max-width: 500px;">
     <h2 class="text-center mb-4">プロフィール設定</h2>
       <div class="card-body">
-        <form method="POST" action="{{ route('profile.update') }}"enctype="multipart/form-data">
+        <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- プロフィール画像 -->
